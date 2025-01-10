@@ -5,6 +5,13 @@ on:
     branches: [config/ci]
 
 jobs:
+
+  check_dependencies:
+    steps:
+    - name: Check for outdated dependencies
+        run: |
+        pip list --outdated
+
   pytest:
     runs-on: ubuntu-latest
 
@@ -25,7 +32,7 @@ jobs:
 
     - uses: actions/setup-python@v5
       with:
-        python-version: '3.12'
+        python-version: '3.11'
 
     - name: Prepare environment
       run: |
