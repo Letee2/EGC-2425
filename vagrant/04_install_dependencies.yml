@@ -8,11 +8,11 @@
         state: present
         update_cache: yes
 
-    - name: Update the system and install Python 3.12 and dependencies
+    - name: Update the system and install Python 3.11 and dependencies
       apt:
         name:
-          - python3.12
-          - python3.12-venv
+          - python3.11
+          - python3.11-venv
           - mariadb-client
         state: present
 
