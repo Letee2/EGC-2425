@@ -6,10 +6,13 @@ on:
 
 jobs:
   check_dependencies:
-    steps:
-    - name: Check for outdated dependenceis
-        run: |
-          pip list --outdated
+
+    runs-on: ubuntu-latest
+
+      steps:
+      - name: Check for outdated dependenceis
+          run: |
+            pip list --outdated
   pytest:
     runs-on: ubuntu-latest
 
